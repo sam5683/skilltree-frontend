@@ -1,0 +1,104 @@
+/* ==========================================================================
+   footer.css
+   Footer + Social Icons
+   ========================================================================== */
+
+footer {
+  text-align: center;
+  padding: 32px 18px;
+  opacity: 0.55;
+  position: relative;
+  z-index: 12;
+}
+
+/* Footer container */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Social icons container */
+.footer-socials {
+
+  display: flex;
+
+  gap: 14px;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 18px;
+}
+
+.social-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  color:
+    rgba(255,255,255,0.68);
+
+  font-size: 0.92rem;
+
+  transition: 0.2s ease;
+}
+
+.social-btn:hover {
+
+  color: white;
+
+  transform: translateY(-2px);
+
+  border:
+    1px solid rgba(96,165,250,0.22);
+
+  box-shadow:
+    0 10px 25px rgba(96,165,250,0.14);
+}
+/* Icon size (professional standard: 28px–32px) */
+.social-btn img {
+  width: 32px;
+  height: 32px;
+  opacity: 0.75;
+  transition: all 0.22s ease;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+/* Glow on hover */
+.social-btn:hover img {
+  opacity: 1;
+  transform: scale(1.14) translateY(-2px);
+  filter: drop-shadow(0 0 6px rgba(120,200,255,0.55));
+}
+
+/* Footer copyright text */
+.footer-copy {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .social-btn img {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -1,0 +1,153 @@
+/* ==========================================================================
+   flatpickr.css — Dark Modern Calendar (Balanced + Readable)
+   ========================================================================== */
+
+/* Calendar Container */
+.flatpickr-calendar {
+  background: rgba(10, 12, 18, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #e6edf7 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.65) !important;
+  padding: 10px !important;
+  min-width: 300px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
+   Month / Year Header
+   ========================================================================== */
+
+.flatpickr-months {
+  padding: 6px 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Fix alignment */
+.flatpickr-current-month {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px;
+}
+
+/* Month dropdown (MAIN FIX) */
+.flatpickr-monthDropdown-months {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Year */
+.flatpickr-current-month input.cur-year {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  border: none !important;
+  opacity: 0.95;
+}
+
+/* Year arrows */
+.flatpickr-current-month .numInputWrapper span.arrowUp:after,
+.flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-color: rgba(255, 255, 255, 0.8) transparent !important;
+}
+
+.flatpickr-current-month .numInputWrapper span.arrowUp:hover:after,
+.flatpickr-current-month .numInputWrapper span.arrowDown:hover:after {
+  border-color: #4ade80 transparent !important;
+}
+
+/* ==========================================================================
+   Navigation Arrows
+   ========================================================================== */
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+  fill: rgba(255, 255, 255, 0.75) !important;
+  width: 18px !important;
+  height: 18px !important;
+  transition: 0.2s;
+}
+
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+  fill: #4ade80 !important;
+}
+
+/* ==========================================================================
+   Weekdays (less aggressive, better hierarchy)
+   ========================================================================== */
+
+.flatpickr-weekday {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-weight: 500 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   Days
+   ========================================================================== */
+
+.flatpickr-day {
+  color: rgba(255, 255, 255, 0.88) !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  margin: 2px !important;
+  transition: all 0.18s ease;
+}
+
+/* Hover */
+.flatpickr-day:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Selected (cleaner contrast) */
+.flatpickr-day.selected {
+  background: linear-gradient(135deg, #4ade80, #3b82f6) !important;
+  color: #031417 !important;
+  font-weight: 600;
+}
+
+/* Today (subtle, not loud) */
+.flatpickr-day.today {
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+
+/* Disabled */
+.flatpickr-day.flatpickr-disabled {
+  opacity: 0.25 !important;
+  color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ==========================================================================
+   Dropdown options (kept strong but not heavy)
+   ========================================================================== */
+
+.flatpickr-monthDropdown-months option {
+  background: #141722 !important;
+  color: #ffffff !important;
+  padding: 6px 10px !important;
+}
+
+.flatpickr-monthDropdown-months option:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media (max-width: 480px) {
+  .flatpickr-calendar {
+    min-width: 260px;
+    width: calc(100% - 40px) !important;
+  }
+}

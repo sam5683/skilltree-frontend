@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/*
+========================================
+EXCALIDRAW MOBILE FIXES
+========================================
+*/
+
+@media (max-width: 768px) {
+
+  /*
+    REDUCE BOTTOM TOOLBAR SIZE
+  */
+
+  .excalidraw .App-menu_bottom {
+    padding-bottom: 0px !important;
+  }
+
+  .excalidraw .App-menu__left {
+    gap: 2px !important;
+  }
+
+  .excalidraw .Stack {
+    padding: 0px !important;
+  }
+
+  .excalidraw .Island {
+    padding: 4px !important;
+    border-radius: 12px !important;
+  }
+
+  /*
+    FIX MAIN MENU OVERFLOW
+  */
+
+  .excalidraw .dropdown-menu {
+    max-height: 52vh !important;
+    overflow-y: auto !important;
+    margin-bottom: 56px !important;
+  }
+
+}
