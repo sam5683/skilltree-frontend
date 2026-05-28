@@ -19,65 +19,45 @@ import AuthModal from "../components/landing/AuthModal"
 
 function LandingPage() {
 
-  const [authOpen, setAuthOpen] =
-    useState(false)
+  const [authOpen, setAuthOpen] = useState(false)
 
-  const [authType, setAuthType] =
-    useState("signin")
+  const [authType, setAuthType] = useState("signin")
 
   return (
-
-    <div className="landing-page">
-
+    <>
       <ParticlesBackground />
-      <WhiteHoleCursor />
 
-      <Navbar
+      <div className="landing-page">
 
-        onSignIn={() => {
+        <WhiteHoleCursor />
 
-          setAuthType("signin")
+        <Navbar
+          onSignIn={() => {
+            setAuthType("signin")
+            setAuthOpen(true)
+          }}
 
-          setAuthOpen(true)
+          onSignUp={() => {
+            setAuthType("signup")
+            setAuthOpen(true)
+          }}
+        />
 
-        }}
+        <main>
+          <Hero />
+          <About />
+          <Footer />
+        </main>
 
-        onSignUp={() => {
+        <AuthModal
+          open={authOpen}
+          type={authType}
+          onClose={() => setAuthOpen(false)}
+        />
 
-          setAuthType("signup")
-
-          setAuthOpen(true)
-
-        }}
-
-      />
-
-      <main>
-
-        <Hero />
-
-        <About />
-
-        <Footer />
-
-      </main>
-
-      <AuthModal
-
-        open={authOpen}
-
-        type={authType}
-
-        onClose={() =>
-          setAuthOpen(false)
-        }
-
-      />
-
-    </div>
-
+      </div>
+    </>
   )
-
 }
 
 export default LandingPage
